@@ -21,4 +21,4 @@ Welcome to NFT Dutch Auction. This project helps users create and sell their NFT
 * [0xf721be304E7B5902bF94Ae2b0B973908C5893f22](https://goerli.etherscan.io/address/0xf721be304e7b5902bf94ae2b0b973908c5893f22)
 
 ### Checkout the contract
-* auction.sol file
+* auction.sol file 
