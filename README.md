@@ -1,5 +1,7 @@
 # NFT Dutch Auction #
 
+[DEMO](https://vitejsviten1dvam-g20s--5173.local-credentialless.webcontainer.io/)
+
 Welcome to NFT Dutch Auction. This project helps users create and sell their NFTs in our very own market place. NFTs are sold in a Dutch Auction manner, so that creators can get maximum profits.
 
 ### How it works? ###
@@ -21,4 +23,4 @@ Welcome to NFT Dutch Auction. This project helps users create and sell their NFT
 * [0xf721be304E7B5902bF94Ae2b0B973908C5893f22](https://goerli.etherscan.io/address/0xf721be304e7b5902bf94ae2b0b973908c5893f22)
 
 ### Checkout the contract
-* auction.sol file 
+* auction.sol file
