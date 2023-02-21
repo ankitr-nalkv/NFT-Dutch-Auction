@@ -2,6 +2,8 @@
 
 [DEMO](https://vitejsviten1dvam-g20s--5173.local-credentialless.webcontainer.io/)
 
+[CODE](https://stackblitz.com/edit/vitejs-vite-n1dvam)
+
 Welcome to NFT Dutch Auction. This project helps users create and sell their NFTs in our very own market place. NFTs are sold in a Dutch Auction manner, so that creators can get maximum profits.
 
 ### How it works? ###
