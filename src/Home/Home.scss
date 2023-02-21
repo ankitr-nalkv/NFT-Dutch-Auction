@@ -1,0 +1,15 @@
+.home-page {
+  width: 80%;
+
+  .tab-container {
+    display: flex;
+    gap: 1rem;
+  }
+  .auction-table {
+    margin: 1rem 0;
+  }
+}
+.active {
+  background: #d3e7ff;
+  border: 1px solid;
+}

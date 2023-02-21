@@ -1,0 +1,51 @@
+.portfolio-page {
+  width: 80%;
+  .portfolio-container {
+    // background: lightcyan;
+    display: flex;
+    justify-content: space-around;
+
+    .image-container {
+    }
+    .details-container {
+      div {
+        margin: 1rem 0;
+      }
+      .details-label {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
+.form-field {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  label {
+    flex: 1;
+  }
+  input {
+    padding: 0.4rem;
+    font-size: medium;
+    flex: 2;
+  }
+}
+.item-image {
+  // border-radius: 50%;
+  max-height: 200px;
+}
+
+.auction-actions {
+  display: flex;
+  > * {
+    flex: 1;
+  }
+}
+
+// #845EC2
+// #D65DB1
+// #FF6F91
+// #FF9671
+// #FFC75F
+// #F9F871

@@ -1,0 +1,20 @@
+main {
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background: #415a7e5c;
+  ul,
+  h3,
+  a {
+    color: initial;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+  }
+}
