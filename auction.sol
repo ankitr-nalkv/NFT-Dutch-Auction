@@ -46,13 +46,13 @@ contract AAAAuction is ERC721, ERC721URIStorage, ERC721Burnable, Ownable {
     uint discountAmount = 1;
     uint depreciationTime = 120;
     // store members who bid on item
-    mapping(uint256 => mapping(address => bool)) bidPerItem;
+    mapping(uint256 => mapping(address => uint)) bidPerItem;
     // fetch owner details based on address
     mapping(address => Member) public memberInfo;
     // store total members count
     uint public memberCount;
     // Auction Fees
-    uint auctionFeePercent = 2;
+    uint8 auctionFeePercent = 2;
     // Auctioneer
     address payable public auctioneer;
 
@@ -161,7 +161,7 @@ contract AAAAuction is ERC721, ERC721URIStorage, ERC721Burnable, Ownable {
             getBidState(tokenId, block.timestamp) == State.Bidding,
             "Not available for bidding"
         );
-        bidPerItem[tokenId][from] = true;
+        bidPerItem[tokenId][from] = block.timestamp;
         if (itemPerId[tokenId].highestItemBidValue < bidValue) {
             Item storage curItem = itemPerId[tokenId];
             curItem.highestItemBidValue = bidValue;
@@ -193,8 +193,15 @@ contract AAAAuction is ERC721, ERC721URIStorage, ERC721Burnable, Ownable {
     }
 
     function buy(address to, uint256 tokenId) public payable onlyMember {
+        uint buyerBidTime = bidPerItem[tokenId][to];
+        Item memory item = itemPerId[tokenId];
         require(ERC721.ownerOf(tokenId) != address(0), "No such token exists");
-        require(bidPerItem[tokenId][to], "Did not bid for the item");
+        require(
+            (uint256(item.bidStartTime) < buyerBidTime) &&
+                (buyerBidTime <=
+                    uint256(item.bidStartTime + timeToBidInSeconds)),
+            "Did not bid for the item"
+        );
         require(
             getBidState(tokenId, block.timestamp) == State.ToPurchase,
             "Cant purchase when not in buy state"
@@ -252,7 +259,7 @@ contract AAAAuction is ERC721, ERC721URIStorage, ERC721Burnable, Ownable {
         auctioneer = to;
     }
 
-    function setAuctionFees(uint percent) public onlyAuctioneer {
+    function setAuctionFees(uint8 percent) public onlyAuctioneer {
         auctionFeePercent = percent;
     }
 
