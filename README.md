@@ -18,7 +18,7 @@ Welcome to NFT Dutch Auction. This project helps users create and sell their NFT
 
 * npm install
 * npm run dev
-* Make sure to have Metamask extension installed in your browser, and you have account in Goerli Ethereum testnet
+* Make sure to have Metamask extension installed in your browser, and have an account in Goerli Ethereum testnet
 
 ### Contract on Goerli Testnet ###
 
