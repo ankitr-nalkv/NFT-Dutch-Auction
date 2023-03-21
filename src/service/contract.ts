@@ -3,7 +3,9 @@ import { BigNumber, ethers } from "ethers";
 import { fetchNFT } from "./createNFT";
 // import { setItemState } from "../Home/Home";
 
-const contractAddress = "0xf721be304E7B5902bF94Ae2b0B973908C5893f22";
+// 0xE7daae9c900c3DC347b37A0Bb703984C88433561 - polygon testnet
+// 0xE7daae9c900c3DC347b37A0Bb703984C88433561 - goerli testnet
+const contractAddress = "0xE7daae9c900c3DC347b37A0Bb703984C88433561";
 let provider, signer: any, contract: any, memberAddress: any;
 
 export const enum State {
